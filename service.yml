@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodesvc
+spec:
+  selector:
+    app: new-app
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      name: nginx
+
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      name: tomcat
+
+  
+    
+
